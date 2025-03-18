@@ -74,6 +74,8 @@ class DataTransformation:
             save_numpy_array_data(self.data_transformation_config.transformed_test_file_path,test_arr)
             save_object(self.data_transformation_config.transformed_object_file_path,preProcessor_obj)
 
+            #saving preprocessor
+            save_object("final_models/preprocessor.pkl",preProcessor_obj)
             logging.info("datas have been saved as numpy array")
 
             data_transformation_artifact=  DataTransformationArtifact(
