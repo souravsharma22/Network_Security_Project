@@ -25,20 +25,53 @@ Network security is critical in today’s digital landscape. This project applie
 ```bash
 Network_Security_Project/
 │
-├── dataset/                   # Training and test CSV files (NSL-KDD)
-├── ml_models/                 # Python scripts for training different ML models
-│   ├── decision_tree.py
-│   ├── logistic_regression.py
-│   ├── random_forest.py
-│   ├── naive_bayes.py
-│   └── knn.py
-├── preprocessing/             # Scripts for cleaning and encoding data
-│   └── preprocess.py
-├── visualizations/            # Charts and graphs for analysis
-├── model/                     # Serialized trained models (.joblib)
-├── main.py                    # Main script to run end-to-end pipeline
-└── requirements.txt           # List of required Python packages
+├── .github/workflows/        # GitHub Actions for CI/CD
+├── NetworkData/              # Raw or sample network data files
+├── NetworkSecurity/          # Core ML logic and modules
+├── __pycache__/              # Python cache files
+├── data_schema/              # Data validation schema definitions
+├── final_models/             # Trained and serialized ML models
+├── prediction_output/        # Output from prediction scripts
+├── templates/                # HTML templates for the web interface
+├── valid_data/               # Cleaned and validated data
+│
+├── .gitignore                # Files to ignore in Git
+├── Dockerfile                # For containerizing the app
+├── README.md                 # Project description
+├── app.py                    # Flask app for model deployment
+├── main.py                   # Main pipeline for training & evaluation
+├── push_data.py              # Script to push data to MongoDB
+├── requirements.txt          # Required Python packages
+├── setup.py                  # Logging and exception handling config
+└── test_mongodb.py           # MongoDB connection testing
 ```
+
+---
+
+## 🧠 Key Features
+
+- 📊 **Data Preprocessing & Validation**
+  - Schema-based validation using `data_schema/`
+  - Segregation into `valid_data/` and prediction-ready datasets
+
+- 🧪 **Model Training & Evaluation**
+  - Classification models trained using structured network data
+  - Saved models in `final_models/`
+
+- 🧾 **Prediction Pipeline**
+  - Input data → validation → prediction
+  - Output stored in `prediction_output/`
+
+- 🌐 **Web Interface**
+  - Built with **Flask**
+  - Accessible via `app.py` for real-time predictions
+
+- 🛠 **MongoDB Integration**
+  - Data pushed to MongoDB via `push_data.py`
+  - Connection tested via `test_mongodb.py`
+
+- 🐳 **Dockerized**
+  - App can be deployed as a container using the included `Dockerfile`
 
 ---
 
